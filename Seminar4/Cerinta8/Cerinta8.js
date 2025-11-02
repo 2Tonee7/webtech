@@ -30,5 +30,4 @@ function compressFile(inputPath, outputPath) {
     });
 }
 
-// --- Exemplu de utilizare ---
 compressFile("input.txt", "compressed.txt");
