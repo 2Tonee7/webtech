@@ -54,4 +54,4 @@ async function loadInitialList() {
         document.getElementById('tableData').innerHTML = '<p>Erore lista incarcare la server.</p>';
     }
 }
-window.onload = loadInitialList
+window.onload = loadInitialList;
