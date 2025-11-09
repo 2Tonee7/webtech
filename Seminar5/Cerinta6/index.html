@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <div>
+        <form>
+           <label>Nume: <input id="inputName" type="text"></label>
+            <br /> <br />
+            <label>Varsta: </label><input id="inputAge" type="text"> <br /> <br />
+            <input value="Adauga" onclick="sendData()" type="button"> <br /><br />
+        </form>
+    </div>
+    <div id="tableData">
+
+    </div>
+
+    <div>
+    <h3>Gaseste persoana dupa ID: </h3>
+    <input id="inputId" type="number" placeholder="Enter ID">
+    <input value="Get" onclick="getById()" type="button">
+</div>
+
+<div id="singleData">
+    
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="client.js"></script>
+
+</html>
