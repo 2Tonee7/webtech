@@ -13,5 +13,7 @@
     "@types/node": "^22.5.5",
     "nodemon": "^3.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rimraf": "^6.1.0"
+  }
 }

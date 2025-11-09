@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cerinta4</title>
+    <script>
+        window.onload = () => {
+            const input = document.getElementById('input');
+            const event = new Event('event');
+            const eventH = () => {
+                console.log('Eveniment declansat');
+            }
+            const inputH = (e) => {
+                console.log('Input modificat:', e.target.value);
+                document.dispatchEvent(event);
+            }
+            input.addEventListener('input', inputH);
+            document.addEventListener('event', eventH);
+        }
+    </script>
+</head>
+<body>
+    <label for="input">Scrie ceva:</label>
+    <input type="text" id="input">
+</body>
+</html>
