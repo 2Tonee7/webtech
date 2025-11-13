@@ -1,0 +1,38 @@
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.square {
+    float: left;
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.top.middle,
+.middle.center,
+.bottom.middle,
+.top.right,
+.middle.right,
+.bottom.right {
+    border-left: 3px solid grey;
+}
+
+.middle.left,
+.middle.center,
+.middle.right,
+.bottom.left,
+.bottom.middle,
+.bottom.right {
+    border-top: 3px solid grey;
+}
