@@ -1,0 +1,219 @@
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mesajero</title>
+  <style>
+    :root {
+        --culoare-fundal-principal: #fafafa;
+        --culoare-fundal-secundar: #e8e8e8;
+        --culoare-text-principal: #1a1a1a;
+        --culoare-text-secundar: #666;
+        --culoare-accent: lightblue;
+    }
+    
+    body
+    {
+        margin: 0px;
+    }
+    
+    .container 
+    {
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-template-rows: 10% auto 10%;
+        grid-template-areas:
+        "bara-cautare antet-conversatie"
+        "contacte conversatie"
+        "contacte zona-mesaj";
+        height: 100vh;
+    }
+
+    div.bara-cautare
+    {
+        grid-area: bara-cautare;
+        background-color: var(--culoare-fundal-secundar);
+        height: 100%;
+        width: 100%;
+    }
+
+    div.contacte
+    {
+        grid-area: contacte;
+        height: 100%;
+        width: 100%;
+    }
+
+    div.antet-conversatie
+    {
+        grid-area: antet-conversatie;
+        background-color: var(--culoare-fundal-secundar);
+        height: 100%;
+        width: 100%;
+    }
+
+    div.conversatie
+    {
+        grid-area: conversatie;
+        height: 100%;
+        width: 100%;
+    }
+
+    div.zona-mesaj
+    {
+        grid-area: zona-mesaj;
+        background-color: var(--culoare-fundal-secundar);
+        height: 100%;
+        width: 100%;
+    }
+
+    .avatar 
+    {
+        height: 5vh;
+        width: 5vh;
+        background-color: var(--culoare-accent);
+        color: var(--culoare-fundal-principal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact
+    {
+        height: 10vh;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.2s;
+    }
+    
+    .contact:hover
+    {
+        background-color: #d5d5d5;
+        cursor: pointer;
+    }
+
+    .contact:nth-child(even)
+    {
+        background-color: var(--culoare-fundal-secundar);
+    }
+
+    .detalii-contact
+    {
+        padding-left: 10px;
+    }
+    
+    .detalii-contact .stare
+    {
+        font-size: 0.8em;
+        color: var(--culoare-text-secundar);
+    }
+
+    .conversatie .mesaj
+    {
+        margin: 10px;
+        width: 75%;
+        min-height: 10vh;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .conversatie .mesaj:nth-child(odd)
+    {
+        background-color: var(--culoare-fundal-secundar);
+        float: left;
+        clear: right;
+    }
+    
+    .conversatie .mesaj:nth-child(even)
+    {
+        background-color: var(--culoare-accent);
+        float: right;
+        clear: left;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .conversatie .mesaj .ora {
+        color: var(--culoare-text-secundar);
+    }
+
+    .conversatie .mesaj .ora::before
+    {
+        content :'@';
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="bara-cautare">
+        <input type="text" placeholder="Cauta sau incepe chat" id="cautare">
+      </div>
+      <div class="contacte">
+        <div class="contact">
+          <div class="avatar">M</div>
+          <div class="detalii-contact">
+            <div class="nume">Maria</div>
+            <div class="stare">Online</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="avatar">A</div>
+          <div class="detalii-contact">
+            <div class="nume">Andrei</div>
+            <div class="stare">Online</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="avatar">E</div>
+          <div class="detalii-contact">
+            <div class="nume">Elena</div>
+            <div class="stare">Online</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="avatar">I</div>
+          <div class="detalii-contact">
+            <div class="nume">Ion</div>
+            <div class="stare">Online</div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="antet-conversatie">
+      <div class="avatar">M</div>
+      <div class="interlocutor">Maria</div>
+    </div>
+    <div class="conversatie">
+      <div class="mesaj">
+        <div class="continut">Mesaj de la mine</div>
+        <div class="ora">14:30</div>
+      </div>
+      <div class="mesaj">
+        <div class="continut">Mesaj de la Maria</div>
+        <div class="ora">14:32</div>
+      </div>
+      <div class="mesaj">
+        <div class="continut">Alt mesaj de la mine</div>
+        <div class="ora">14:35</div>
+      </div>
+    </div>
+    <div class="zona-mesaj">
+      <input type="text" placeholder="Scrie mesajul aici">
+      <input type="button" value="→">
+    </div>
+  </div>
+</body>
+</html>

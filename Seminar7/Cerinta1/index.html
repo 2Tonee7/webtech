@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .column {
+            flex: 1;
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item {
+            padding: 10px;
+            background-color: lightblue;
+            border-radius: 6px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <div class="item">Element 1</div>
+        <div class="item">Element 2</div>
+        <div class="item">Element 3</div>
+    </div>
+
+    <div class="column">
+        <div class="item">Element 4</div>
+        <div class="item">Element 5</div>
+        <div class="item">Element 6</div>
+    </div>
+
+    <div class="column">
+        <div class="item">Element 7</div>
+        <div class="item">Element 8</div>
+        <div class="item">Element 9</div>
+    </div>
+</div>
+
+</body>
+</html>

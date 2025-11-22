@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  :root{ --tile:50px; 
+    --light:white; 
+    --dark:black; }
+    
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:lightgrey;
+  }
+
+  .board{
+    display:grid;
+    grid-template-columns:repeat(8, var(--tile)); 
+  }
+
+  .square{ width:var(--tile); height:var(--tile); }
+
+  .board .square:nth-child(16n+1),
+  .board .square:nth-child(16n+3),
+  .board .square:nth-child(16n+5),
+  .board .square:nth-child(16n+7),
+  .board .square:nth-child(16n+10),
+  .board .square:nth-child(16n+12),
+  .board .square:nth-child(16n+14),
+  .board .square:nth-child(16n+16) {
+    background: var(--dark);
+  }
+
+  .board .square { background: var(--light); }
+
+</style>
+</head>
+<body>
+
+<div class="board" aria-label="tabla de sah">
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+  <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+</div>
+
+</body>
+</html>
